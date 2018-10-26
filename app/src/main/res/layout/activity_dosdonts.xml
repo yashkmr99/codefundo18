@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
     tools:context=".optionsactivity">
 
     <android.support.constraint.Guideline
@@ -28,8 +27,10 @@
         android:orientation="vertical"
         app:layout_constraintGuide_percent="1" />
 
+
+
     <ImageButton
-        android:id="@+id/mapShelterButton"
+        android:id="@+id/earthquake"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
@@ -42,10 +43,10 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/globe_map7" />
+        app:srcCompat="@drawable/earthquake" />
 
     <ImageButton
-        android:id="@+id/callHelpAmbulanceButton"
+        android:id="@+id/hurricane"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -58,54 +59,71 @@
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ambulance_pin" />
+        app:srcCompat="@drawable/tor" />
 
     <ImageButton
-        android:id="@+id/doDontButton"
+        android:id="@+id/flood"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
         android:background="#91D3F8"
-        android:padding="0dp"
+        android:padding="13dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/mapShelterButton"
-        app:srcCompat="@drawable/book6" />
+        app:layout_constraintTop_toBottomOf="@+id/earthquake"
+        app:srcCompat="@drawable/floods" />
 
     <ImageButton
-        android:id="@+id/showStranded"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="1dp"
-        android:background="#91D3F8"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        app:layout_constraintTop_toBottomOf="@+id/doDontButton"
-        app:srcCompat="@drawable/show_man" />
-
-    <ImageButton
-        android:id="@+id/MarkStranded"
+        android:id="@+id/tsunami"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
-        android:background="#E291F8"
+        android:background="#F2A"
         android:padding="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="@id/guideline2"
-        app:layout_constraintTop_toBottomOf="@id/callHelpAmbulanceButton"
-        app:srcCompat="@drawable/stranded" />
+        app:layout_constraintTop_toBottomOf="@+id/hurricane"
+        app:srcCompat="@drawable/tsunami" />
+
+    <ImageButton
+        android:id="@+id/landslides"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="1dp"
+        android:background="#F4C4"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/flood"
+        app:srcCompat="@drawable/landslides" />
+
+    <ImageButton
+        android:id="@+id/emergency"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:background="#F4C490"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tsunami"
+        app:srcCompat="@drawable/emergency" />
+
 
 </android.support.constraint.ConstraintLayout>

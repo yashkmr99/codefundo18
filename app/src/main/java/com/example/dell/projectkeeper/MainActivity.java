@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
     Button loginbutton;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         loginbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int1 = new Intent(MainActivity.this, LoginActivity.class);
+                int1 = new Intent(MainActivity.this, optionsactivity.class);
                 startActivity(int1);
 
             }

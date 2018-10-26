@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Project Keeper</string>
+    <string name="title_activity_show_stranded">Map</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
