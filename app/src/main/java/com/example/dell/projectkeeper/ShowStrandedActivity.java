@@ -1,9 +1,11 @@
 package com.example.dell.projectkeeper;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -11,60 +13,27 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.firebase.database.ChildEventListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
+
 
 public class ShowStrandedActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
-    private DatabaseReference mdatabase;
-
-    private String value;
-    private Float lat,lon;
+    private ArrayList<String> mList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_stranded);
 
-        mdatabase = FirebaseDatabase.getInstance().getReference().child("People");
-
-        mdatabase.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-                value = dataSnapshot.getValue(String.class);
-
-                lat = Float.parseFloat(value.substring(0,8));
-                lon = Float.parseFloat(value.substring(10,18));
+        Intent intent = getIntent();
+        Bundle args = intent.getBundleExtra("BUNDLE");
+        mList = (ArrayList<String>) args.getSerializable("ARRAYLIST");
 
 
-            }
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -86,10 +55,16 @@ public class ShowStrandedActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        if (lat != null) {
+        for(int i=0;i < mList.size();i++) {
+
+            String loca = mList.get(i);
+
+            Float lat = Float.parseFloat(loca.substring(0, 8));
+            Float lon = Float.parseFloat(loca.substring(10, 18));
+            // Add a marker in Sydney and move the camera
+
             LatLng sydney = new LatLng(lat, lon);
-            mMap.addMarker(new MarkerOptions().position(sydney).title("MArker"));
+            mMap.addMarker(new MarkerOptions().position(sydney).title(loca));
             mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
 
         }

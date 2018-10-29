@@ -61,7 +61,7 @@ public class optionsactivity extends AppCompatActivity {
         showStranded.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in1 = new Intent(optionsactivity.this, ShowStrandedActivity.class);
+                Intent in1 = new Intent(optionsactivity.this, ListStranded.class);
                 startActivity(in1);
             }
         });

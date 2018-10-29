@@ -28,7 +28,6 @@
         app:layout_constraintGuide_percent="1" />
 
 
-
     <ImageButton
         android:id="@+id/earthquake"
         android:layout_width="0dp"
@@ -36,14 +35,14 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
-        android:background="#e44"
-        android:padding="10dp"
+        android:background="#f7d665"
+        android:padding="14dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/earthquake" />
+        app:srcCompat="@drawable/earthquake2" />
 
     <ImageButton
         android:id="@+id/hurricane"
@@ -52,14 +51,14 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
-        android:background="#F2CF52"
+        android:background="#e4e3e3"
         android:padding="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/tor" />
+        app:srcCompat="@drawable/hurricane3" />
 
     <ImageButton
         android:id="@+id/flood"
@@ -68,8 +67,8 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="1dp"
-        android:background="#91D3F8"
-        android:padding="13dp"
+        android:background="#70f4ed"
+        android:padding="18dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -84,7 +83,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
-        android:background="#F2A"
+        android:background="#70f4ed"
         android:padding="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
@@ -116,7 +115,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="2dp"
         android:layout_marginEnd="2dp"
-        android:background="#F4C490"
+        android:background="#e44"
         android:padding="0dp"
         android:scaleType="fitCenter"
         app:layout_constraintDimensionRatio="1:1"
